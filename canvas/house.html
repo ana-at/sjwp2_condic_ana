@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House</title>
+</head>
+<body>
+    <canvas id="house" width="600" height="600" style="border: 1px solid gray;"></canvas>
+
+    <script>
+        let c = document.getElementById("house");
+        let ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.rect(50, 200, 300, 200);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(70, 280, 70, 120);
+        ctx.fillStyle = "lightgrey";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(200, 280, 100, 50);
+        ctx.fillStyle = "lightgrey";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(50, 200);
+        ctx.lineTo(200, 120);
+        ctx.lineTo(350, 200);
+        ctx.lineTo(50, 200);
+        ctx.fillStyle = "red";
+        ctx.fill();
+    </script>
+</body>
+</html>

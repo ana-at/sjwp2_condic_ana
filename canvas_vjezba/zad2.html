@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 2</title>
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="600" style="border: 1px solid black;"></canvas>
+
+    <script>
+        let c = document.getElementById("mycanvas");
+        let ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.rect(0, 0, 600, 600);
+        ctx.fillStyle = "rgb(214, 168, 141)";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(300, 1090, 700, 0, 2*Math.PI);
+        ctx.fillStyle = "beige";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(70, 460);
+        ctx.lineTo(170, 460);
+        ctx.lineTo(120, 220);
+        ctx.lineTo(70, 460);
+        ctx.fillStyle = "darkgreen";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(115, 460, 10, 60);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(180, 455);
+        ctx.lineTo(230, 455);
+        ctx.lineTo(205, 300);
+        ctx.lineTo(180, 455);
+        ctx.fillStyle = "darkgreen";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(202, 455, 5, 40);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(330, 435);
+        ctx.lineTo(370, 435);
+        ctx.lineTo(350, 300);
+        ctx.lineTo(330, 435);
+        ctx.fillStyle = "darkgreen";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(347, 435, 5, 35);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(390, 445);
+        ctx.lineTo(470, 445);
+        ctx.lineTo(430, 260);
+        ctx.lineTo(390, 445);
+        ctx.fillStyle = "darkgreen";
+        ctx.fill();
+        ctx.beginPath();
+        ctx.rect(425, 445, 10, 50);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+    </script>
+</body>
+</html>

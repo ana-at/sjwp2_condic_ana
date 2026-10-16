@@ -33,14 +33,6 @@
             text-align: center;
             margin-left: 300px;
         }
-        .i2 {
-            text-align: center;
-            margin-left: 300px;
-        }
-        .i3 {
-            text-align: center;
-            margin-left: 300px;
-        }
         input[type="submit"], input[type="reset"] {
             border-radius: 4px;
             background-color: #c2f8f7;
@@ -51,10 +43,10 @@
     </style>
 </head>
 <body>
-    <ul id="menuu">
-        <li id="i1"><a href="./dodatno/pocetna.html">Početna</a></li>
-        <li id="i2"><a href="./dodatno/onama.html">O nama</a></li>
-        <li id="i3"><a href="./dodatno/kontakt.html">Kontakt</a></li>
+    <ul class="menuu">
+        <li class="i1"><a href="./dodatno/pocetna.html">Početna</a></li>
+        <li class="i1"><a href="./dodatno/onama.html">O nama</a></li>
+        <li class="i1"><a href="./dodatno/kontakt.html">Kontakt</a></li>
     </ul>
     <h1>HTML, CSS, Canvas i SVG</h1>
     <p>
@@ -178,7 +170,62 @@
         ctx.arc(295, 380, 20, 0, 2*Math.PI);
         ctx.fillStyle = "orange";
         ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(250, 200, 25, 0, 2*Math.PI);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(350, 200, 25, 0, 2*Math.PI);
+        ctx.fillStyle = "white";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(250, 200, 15, 0, 2*Math.PI);
+        ctx.fillStyle = "darkblue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(350, 200, 15, 0, 2*Math.PI);
+        ctx.fillStyle = "darkblue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(300, 270, 60, 0, Math.PI);
+        ctx.fillStyle = "pink";
+        ctx.fill();
     </script>
+
+    <svg width="600" height="600" style="border: 1px solid black;">
+        <rect width="600" height="600" fill="lightblue"></rect>
+
+        <rect x="200" y="100" width="200" height="40" fill="darkblue"></rect>
+
+        <rect x="200" y="140" width="200" height="200" fill="beige"></rect>
+
+        <rect x="160" y="180" width="40" height="60" fill="orange"></rect>
+
+        <rect x="400" y="180" width="40" height="60" fill="orange"></rect>
+
+        <polygon points="280,240 320,240 300,210" fill="darkorange"></polygon>
+
+        <polygon points="240,350 240,410 290,380" fill="darkblue"></polygon>
+
+        <polygon points="350,350 350,410 300,380" fill="darkblue"></polygon>
+
+        <circle cx="295" cy="380" r="20" fill="orange"></circle>
+
+        <circle cx="250" cy="200" r="25" fill="white"></circle>
+
+        <circle cx="350" cy="200" r="25" fill="white"></circle>
+
+        <circle cx="250" cy="200" r="15" fill="darkblue"></circle>
+
+        <circle cx="350" cy="200" r="15" fill="darkblue"></circle>
+
+        <path d="M 360 270 A 60 60 0 0 1 240 270" fill="pink"></path>
+    </svg>
 
     <form action="./dodatno/forma.html" method="get">
         <label for="name">Unesi ime:</label> <br>

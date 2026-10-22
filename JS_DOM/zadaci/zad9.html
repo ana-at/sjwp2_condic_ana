@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 9</title>
+    <style>
+        .vid{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Ovo je tekst.</p>
+    <button>btn</button>
+
+    <script>
+        const p = document.querySelector("p");
+        const btn = document.querySelector("button");
+
+        btn.onclick = function(){
+            p.classList.toggle("vid");
+        }
+    </script>
+</body>
+</html>

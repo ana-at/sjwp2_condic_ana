@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 11</title>
+</head>
+<body>
+    <a href="https://www.wikipedia.org/" >Wikipedia</a>
+    <br>
+    <button>Promjena linka</button>
+
+    <script>
+        const btn = document.querySelector("button");
+        const a = document.querySelector("a");
+
+        btn.onclick = function(){
+            if(a.href === "https://www.wikipedia.org/"){
+                a.href = "https://enciklopedija.hr/";
+                a.textContent = "Enciklopedija";
+                return;
+            }
+            if(a.href === "https://enciklopedija.hr/"){
+                a.href = "https://www.wikipedia.org/";
+                a.textContent = "Wikipedia";
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

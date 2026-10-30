@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 12</title>
+</head>
+<body>
+    <button id="btn1">Omogući</button>
+    <br>
+    <button id="btn2">Onemogući</button>
+    <br><br>
+    <button id="btn3" disabled="false">Žrtva</button>
+    <br><br>
+    <p>provjera1</p>
+
+    <!-- NE RADI -->
+
+    <script>
+        const b1 = document.getElementById("btn1");
+        const b2 = document.getElementById("btn2");
+        const b3 = document.getElementById("btn3").disabled = false;
+        const p = document.querySelector("p");
+
+        b1.onclick = function(){
+            b3.disabled = false;
+        }
+        b2.onclick = function(){
+            b3.disabled = true;
+        }
+        b3.onclick = function(){
+            if(p.textContent === "provjera1"){
+                p.textContent = "provjera2";
+                return;
+            }
+            if(p.textContent === "provjera2"){
+                p.textContent = "provjera1";
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -6,10 +6,26 @@
     <title>Zadatak 10</title>
 </head>
 <body>
-    
+    <img src="./img/blue.png" alt="blue">
+    <br>
+    <button id="btn">Promjena slike</button>
 
     <script>
-        
+        const img = document.querySelector("img");
+        const btn = document.getElementById("btn");
+
+        btn.onclick = function(){
+            if(img.alt === "blue"){
+                img.src = "./img/green.png";
+                img.alt = "green";
+                return;
+            }
+            if(img.alt === "green"){
+                img.src = "./img/blue.png";
+                img.alt = "blue";
+                return;
+            }
+        }
     </script>
 </body>
 </html>

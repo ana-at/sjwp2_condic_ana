@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 3</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #prvi{
+            margin-top: 100px;
+            margin-left: 745px;
+            display: flex;
+            flex-direction: row;
+            width: 50px;
+        }
+        #i1{
+            margin: 10px;
+            font-size: 20px;
+            width: 100px;
+        }
+        #i2{
+            margin: 10px;
+            font-size: 20px;
+            width: 100px;
+        }
+        #drugi{
+            margin-top: 20px;
+            margin-left: 800px;
+            width: 300px;
+            font-size: 20px;
+        }
+        #izr{
+            margin-top: 20px;
+            margin-left: 820px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        h1{
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 850px;
+        }
+    </style>
+</head>
+<body>
+    <div id="prvi">
+        <input type="number" id="i1" placeholder="prvi broj">
+        <input type="number" id="i2" placeholder="drugi broj">
+    </div>
+    <div id="drugi">
+        <p>Odabir operacije:</p>
+        <input type="radio" name="oper" id="zb">
+        <label for="zb">Zbrajanje</label> <br>
+        <input type="radio" name="oper" id="od">
+        <label for="od">Oduzimanje</label> <br>
+        <input type="radio" name="oper" id="mn">
+        <label for="mn">Množenje</label> <br>
+        <input type="radio" name="oper" id="di">
+        <label for="di">Dijeljenje</label> <br>
+    </div>
+    <button id="izr">Izračunaj</button>
+    <h1></h1>
+
+    <script>
+        const br1 = document.getElementById("i1");
+        const br2 = document.getElementById("i2");
+        
+    </script>
+</body>
+</html>

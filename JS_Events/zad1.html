@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 100px;
+            margin-left: 900px;
+            font-size: 30px;
+        }
+        button{
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+            margin-left: 830px;
+        }
+    </style>
+</head>
+<body>
+    <h1>0</h1>
+    <div>
+        <button id="minus">-</button>
+        <button id="plus">+</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        const broj = document.querySelector("h1");
+        const btnm = document.getElementById("minus");
+        const btnp = document.getElementById("plus");
+        const btnr = document.getElementById("reset");
+        let br = 0;
+
+        btnm.addEventListener("click", function(){
+            br--;
+            broj.textContent = br;
+        });
+        btnp.addEventListener("click", function(){
+            br++;
+            broj.textContent = br;
+        });
+        btnr.addEventListener("click", function(){
+            br = 0;
+            broj.textContent = br;
+        });
+    </script>
+</body>
+</html>

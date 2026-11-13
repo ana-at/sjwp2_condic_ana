@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 2</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin-top: 100px;
+            margin-left: 750px;
+            font-size: 30px;
+        }
+        h1{
+            margin-top: 10px;
+            margin-left: 890px;
+            font-size: 20px;
+        }
+        h2{
+            margin-top: 10px;
+            margin-left: 840px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <h2></h2>
+    <h1></h1>
+
+    <script>
+        const text = document.querySelector("input");
+        const potvrda = document.querySelector("h1");
+        const poruka = document.querySelector("h2");
+
+        document.addEventListener("keydown", function(event){
+            if(event.key === "Enter"){
+                event.preventDefault();
+                potvrda.textContent = "Potvrđeno.";
+                poruka.textContent = "Pritisnuta tipka: " + event.key;
+            }
+            else if(event.key === "Escape"){
+                potvrda.textContent = "";
+                poruka.textContent = "Pritisnuta tipka: " + event.key;
+                text.value = "";
+            }
+        });
+    </script>
+</body>
+</html>

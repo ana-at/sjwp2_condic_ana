@@ -66,6 +66,46 @@
     <script>
         const br1 = document.getElementById("i1");
         const br2 = document.getElementById("i2");
+        const rez = document.querySelector("h1");
+        const btn_izr = document.getElementById("izr");
+
+        function izvrsi(a, b, operacija){
+            return operacija(a, b);
+        }
+        function zbroj(a, b){
+            return a+b;
+        }
+        function razlika(a, b){
+            return a-b;
+        }
+        function umnozak(a, b){
+            return a*b;
+        }
+        function kolicnik(a, b){
+            return a/b;
+        }
+
+        btn_izr.addEventListener("click", function(){
+            const selected = document.querySelector('input[name="oper"]:checked');
+            if (selected.id === "di" && Number(br2.value) === 0){
+                rez.textContent = "Nije moguće dijeliti s nulom.";
+            }
+            else{
+                if (selected.id === "zb"){
+                    rez.textContent = "Rezultat: " + izvrsi(Number(br1.value), Number(br2.value), zbroj);
+                }
+                else if (selected.id === "od"){
+                    rez.textContent = "Rezultat: " + izvrsi(Number(br1.value), Number(br2.value), razlika);
+                }
+                else if (selected.id === "mn"){
+                    rez.textContent = "Rezultat: " + izvrsi(Number(br1.value), Number(br2.value), umnozak);
+                }
+                else if (selected.id === "di"){
+                    rez.textContent = "Rezultat: " + izvrsi(Number(br1.value), Number(br2.value), kolicnik);
+                }
+            }
+        });
+
         
     </script>
 </body>

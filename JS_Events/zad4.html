@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak 4</title>
+</head>
+<body>
+    <button id="prikaz">Prikaz</button>
+    <button id="filter">50€+</button>
+    <button id="map">Novi naziv</button>
+    <button id="spec">Elektronika</button>
+
+    <script>
+        const btn_prikaz = document.getElementById("prikaz");
+        const btn_filter = document.getElementById("filter");
+        const btn_map = document.getElementById("map");
+        const btn_spec = document.getElementById("spec");
+        const rez = document.querySelector("h1");
+
+        const proizvod = {
+            naziv,
+            cijena,
+            kategorija,
+            stanjeZalihe
+        }
+        function Proizvod(naziv, cijena, kategorija, stanjeZalihe){
+            this.naziv = naziv;
+            this.cijena = cijena;
+            this.kategorija = kategorija;
+            this.stanjeZalihe = stanjeZalihe; 
+        }
+        const p1 = new proizvod("Slušalice", 60, "elektronika", 50);
+        const p2 = new proizvod("Monitor", 100, "elektronika", 40);
+        const p3 = new proizvod("Lampica", 15, "svijetlo", 34);
+        const p4 = new proizvod("Kabel", 20, "elektronika", 52);
+        const p5 = new proizvod("Zdjela", 13, "kucanstvo", 47);
+        const p6 = new proizvod("Tepih", 23, "kucanstvo", 57);
+        const proizvodi = [p1, p2, p3, p4, p5, p6];
+
+        btn_prikaz.addEventListener("click", function(){
+            proizvodi.forEach(el => console.log(el.naziv + " " + el.cijena + " " + el.kategorija + " " + el.stanjeZalihe));
+        });
+
+        btn_filter.addEventListener("click", function(){
+            const fil = proizvodi.filter(el => el.cijena >= 50);
+            fil.forEach(el => console.log(el.naziv + " " + el.cijena + " " + el.kategorija + " " + el.stanjeZalihe));
+        });
+
+        btn_map.addEventListener("click", function(){
+            const novo = proizvodi.map(el => el.naziv = "noviNaziv");
+            novo.forEach(el => console.log(el.naziv + " " + el.cijena + " " + el.kategorija + " " + el.stanjeZalihe));
+        });
+        btn_spec.addEventListener("click", function(){
+            const fil = proizvodi.filter(el => el.kategorija === "elektronika");
+            fil.forEach(el => console.log(el.naziv + " " + el.cijena + " " + el.kategorija + " " + el.stanjeZalihe));
+        });
+    </script>
+</body>
+</html>
